@@ -1,3 +1,7 @@
+body, html {
+  scroll-behavior: smooth;
+}
+
 .home {
   width: 100%;
   align-items: center;
@@ -13,7 +17,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: #21325e;
+  background-color: #272727;
   color: #f0f0f0;
 }
 
@@ -24,6 +28,22 @@
   height: 50px;
 }
 
+.experience{
+  scroll-behavior: smooth;
+}
+
+.experience .experienceTitle {
+  margin-top: 50px;
+  display: grid;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 80px;
+  color: #272727;
+  height: 50px;
+}
 .about .prompt {
   width: 40%;
   font-size: 30px;
@@ -54,9 +74,13 @@
 
 .list span {
   font-size: 20px;
-}
+} 
 
 @media only screen and (max-width: 600px) {
+
+  .experience .experienceTitle{
+    font-size: 40px;
+  }
   .about h2 {
     font-size: 40px;
   }
@@ -77,4 +101,21 @@
   .skills h2 {
     font-size: 30px;
   }
+}
+.arrow-bottom {
+  transform: rotate(0);
+  animation: 0.4s ease 0s infinite alternate none running down-arrow;
+  cursor: pointer;
+}
+
+@keyframes down-arrow {
+  0% {
+      transform: translateY(0px);
+  }
+  50% {
+      transform: translateY(0.2rem);
+  }
+  100% {
+    transform: translateY(0.4rem);
+}
 }

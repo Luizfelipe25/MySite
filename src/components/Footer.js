@@ -9,12 +9,12 @@ function Footer() {
   return (
     <div className="footer">
       <div className="socialMedia">
-        <InstagramIcon />
-        <TwitterIcon />
-        <FacebookIcon />
-        <LinkedInIcon />
+       <a href="https://www.w3schools.com" target="_blank"><InstagramIcon /></a> 
+       <a href="https://www.w3schools.com"><TwitterIcon /></a> 
+       <a href="https://www.w3schools.com"> <FacebookIcon /></a> 
+       <a href="https://www.w3schools.com"><LinkedInIcon /></a> 
       </div>
-      <p> &copy; 2022 pedrotech.com</p>
+      <p> &copy; 2024 luizthedev.com</p>
     </div>
   );
 }

@@ -2,21 +2,32 @@ import React from "react";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import EmailIcon from "@material-ui/icons/Email";
 import GithubIcon from "@material-ui/icons/GitHub";
+import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
+import {
+  VerticalTimeline,
+  VerticalTimelineElement,
+} from "react-vertical-timeline-component";
+import "react-vertical-timeline-component/style.min.css";
+import SchoolIcon from "@material-ui/icons/School";
+import WorkIcon from "@material-ui/icons/Work";
 import "../styles/Home.css";
 
 function Home() {
   return (
     <div className="home">
       <div className="about">
-        <h2> Hi, My Name is Pedro</h2>
+        <h2> Hi, My Name is Luiz Felipe</h2>
         <div className="prompt">
           <p>A software developer with a passion for learning and creating.</p>
           <LinkedInIcon />
           <EmailIcon />
           <GithubIcon />
+          <div class="arrow-bottom" width="80" height="80" viewBox="0 0 50 50">
+                <a href="#experience"><KeyboardArrowDownIcon /></a>
+            </div>
         </div>
       </div>
-      <div className="skills">
+      {/* <div className="skills">
         <h1> Skills</h1>
         <ol className="list">
           <li className="item">
@@ -38,8 +49,62 @@ function Home() {
             <span>JavaScript, Java, Python, C#, C, C++, TypeScript, Go</span>
           </li>
         </ol>
+      </div> */}
+        <div id="experience" className="experience">
+        <h2 className="experienceTitle"> Experiência</h2>
+        <VerticalTimeline lineColor="#3e497a">
+          <VerticalTimelineElement
+            className="vertical-timeline-element--education"
+            date="2017 - 2021"
+            iconStyle={{ background: "#272727", color: "#fff" }}
+            icon={<SchoolIcon />}
+          >
+            <h3 className="vertical-timeline-element-title">
+              Engenharia da Computação
+            </h3>
+
+            <h4 className="vertical-timeline-element-subtitle">
+              Bacharelado
+            </h4>
+
+            <p> Universidade de Taubaté</p>
+          </VerticalTimelineElement>
+          <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            date="2018 - 2020"
+            iconStyle={{ background: "#e9d35b", color: "#fff" }}
+            icon={<WorkIcon />}
+          >
+            <h3 className="vertical-timeline-element-title">
+              Back End Engineer - Google
+            </h3>
+            <h4 className="vertical-timeline-element-subtitle">
+              San Francisco, CA
+            </h4>
+            <p>Developed the backend infrastructure for 3 projects.</p>
+          </VerticalTimelineElement>
+
+          <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            date="2020 - present"
+            iconStyle={{ background: "#e9d35b", color: "#fff" }}
+            icon={<WorkIcon />}
+          >
+            <h3 className="vertical-timeline-element-title">
+              Full Stack Engineer - Twitch
+            </h3>
+            <h4 className="vertical-timeline-element-subtitle">
+              San Francisco, CA
+            </h4>
+            <p>
+              Helped the team launch 2 major features by working both in the front
+              end and back end.
+            </p>
+          </VerticalTimelineElement>
+        </VerticalTimeline>
       </div>
     </div>
+    
   );
 }
 

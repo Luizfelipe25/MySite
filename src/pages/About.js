@@ -10,23 +10,34 @@ import WorkIcon from "@material-ui/icons/Work";
 function Experience() {
   return (
     <div className="experience">
-      <h2 className="experienceTitle"> Experiência</h2>
+      <h1> Experience</h1>
       <VerticalTimeline lineColor="#3e497a">
         <VerticalTimelineElement
           className="vertical-timeline-element--education"
-          date="2017 - 2021"
+          date="2010 - 2014"
           iconStyle={{ background: "#272727", color: "#fff" }}
           icon={<SchoolIcon />}
         >
           <h3 className="vertical-timeline-element-title">
-            Engenharia da Computação
+            My Random High School, Random Place, Random State
+          </h3>
+          <p> High School Diploma</p>
+        </VerticalTimelineElement>
+        <VerticalTimelineElement
+          className="vertical-timeline-element--education"
+          date="2014 - 2018"
+          iconStyle={{ background: "#3e497a", color: "#fff" }}
+          icon={<SchoolIcon />}
+        >
+          <h3 className="vertical-timeline-element-title">
+            My Cool University, Vancouver, British Columbia
           </h3>
 
           <h4 className="vertical-timeline-element-subtitle">
-            Bacharelado
+            Bachelor's Degree
           </h4>
 
-          <p> Universidade de Taubaté</p>
+          <p> Computer Science</p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
