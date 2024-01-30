@@ -11,14 +11,16 @@ import "react-vertical-timeline-component/style.min.css";
 import SchoolIcon from "@material-ui/icons/School";
 import WorkIcon from "@material-ui/icons/Work";
 import "../styles/Home.css";
+import perfil from "../assets/perfil.png";
 
 function Home() {
   return (
     <div className="home">
       <div className="about">
-        <h2> Hi, My Name is Luiz Felipe</h2>
+      <img src= {perfil} />
+      <h2>Olá, eu sou Luiz Felipe</h2>
+      <script></script>
         <div className="prompt">
-          <p>A software developer with a passion for learning and creating.</p>
           <LinkedInIcon />
           <EmailIcon />
           <GithubIcon />

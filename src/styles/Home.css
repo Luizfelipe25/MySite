@@ -23,9 +23,18 @@ body, html {
 
 .about h2 {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 80px;
+  font-size: 60px;
   color: #e9d35b;
   height: 50px;
+  margin-top: 20px;
+}
+
+.about img {
+  max-width: 40%; /* Ensure the image doesn't exceed its container width */
+  max-height: 40%; /* Ensure the image doesn't exceed its container height */
+  width: auto; /* Allow the image to shrink while maintaining its aspect ratio */
+  height: auto; /* Allow the image to shrink while maintaining its aspect ratio */
+  max-width: 50%;
 }
 
 .experience{
@@ -47,6 +56,7 @@ body, html {
 .about .prompt {
   width: 40%;
   font-size: 30px;
+  margin-top: 60px;
 }
 .prompt svg {
   font-size: 60px;
@@ -83,10 +93,11 @@ body, html {
   }
   .about h2 {
     font-size: 40px;
+    margin-top: 20px;
   }
 
   .about .prompt {
-    margin-top: 10px;
+    margin-top: 30px;
     font-size: 20px;
     width: 80%;
   }
@@ -101,6 +112,20 @@ body, html {
   .skills h2 {
     font-size: 30px;
   }
+
+  .language span::after{
+    font-size: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px; 
+    height: 50%;
+  }
+  .language span::before{
+    font-size: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px; 
+    border-left: 0px solid #272727;
+  }
+  
 }
 .arrow-bottom {
   transform: rotate(0);
@@ -118,4 +143,69 @@ body, html {
   100% {
     transform: translateY(0.4rem);
 }
+}
+
+.language {
+  font-weight: 600;
+  min-width: 280px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 40px;
+  color: #f0f0f0;
+  height: 50px;
+  
+}
+
+.language span{
+  position: relative;
+}
+
+.language span::before{
+  content: "Tste";
+  color: #f0f0f0;
+  animation: words 20s infinite;
+}
+
+.language span::after{
+  content: "";
+  position: absolute;
+  width: calc(100% + 8px);
+  height: 100%;
+  background-color: #272727;
+  border-left: 2px solid #f0f0f0;
+  right: -8px;
+  animation: cursor .8s infinite, typing 20s steps(14) infinite;
+}
+
+@keyframes cursor {
+  to{
+    border-left: 1px solid #272727;
+  }
+}
+
+@keyframes words {
+  
+  0%,20%{
+    content: "Engenheiro de Computação";
+  }
+  21%,40%{
+    content: "Engenheiro de Software";
+  }
+  41%,60%{
+    content: "Entusiasta Tech";
+  }
+  61%,80%{
+    content: "Cafézeiro";
+  }
+  81%,100%{
+    content: "";
+  }
+}
+
+@keyframes typing {
+  10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
+    width: 0;
+  }
+  5%,20%,25%,40%,45%,60%,65%,80%,85%{
+    width: calc(100% + 8px);
+  }
 }
