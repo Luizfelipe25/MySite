@@ -12,6 +12,7 @@ import SchoolIcon from "@material-ui/icons/School";
 import WorkIcon from "@material-ui/icons/Work";
 import "../styles/Home.css";
 import perfil from "../assets/perfil.png";
+import Projects from "./Projects";
 
 function Home() {
   return (
@@ -19,39 +20,31 @@ function Home() {
       <div className="about">
       <img src= {perfil} />
       <h2>Olá, eu sou Luiz Felipe</h2>
-      <script></script>
+      <div className="language"><span></span></div>
         <div className="prompt">
           <LinkedInIcon />
           <EmailIcon />
           <GithubIcon />
           <div class="arrow-bottom" width="80" height="80" viewBox="0 0 50 50">
-                <a href="#experience"><KeyboardArrowDownIcon /></a>
+                <a href="#aboutMe"><KeyboardArrowDownIcon /></a>
             </div>
         </div>
       </div>
-      {/* <div className="skills">
-        <h1> Skills</h1>
-        <ol className="list">
-          <li className="item">
-            <h2> Front-End</h2>
-            <span>
-              ReactJS, Angular, Redux, HTML, CSS, React Native, Flutter, NPM,
-              Ionic, BootStrap, MaterialUI, Yarn, TailwindCSS, StyledComponents
-            </span>
-          </li>
-          <li className="item">
-            <h2>Back-End</h2>
-            <span>
-              NodeJS, Java Spring, .NET, ExpressJS, GraphQL, ApolloServer,
-              MySQL, MongoDB, DynamoDB, DigitalOcean, AWS S3, MS SQL
-            </span>
-          </li>
-          <li className="item">
-            <h2>Languages</h2>
-            <span>JavaScript, Java, Python, C#, C, C++, TypeScript, Go</span>
-          </li>
-        </ol>
-      </div> */}
+      <div id="aboutMe" className="skills">
+        <h1> Sobre Mim</h1>
+        <div className="about-me">
+          <p>
+            Engenheiro de software e formado em Engenharia da Computação<br/>
+            atuo na área de desenvolvimento Web e Mobile desde 2019. <br/> <br/>
+            Javeiro de coração, venho me aventurando nos meios de arquitetura e agora <br/>
+            pretendo compartilhar um pouco dos meus conhecimentos com a comunidade!<br/><br/>
+            Amo desenvolver! O fato de novos desafios aparecerem constantemente<br/>
+            me motiva cada vez mais a evoluir na área tech, estar fora da minha zona <br/>
+            de conforto é como um combustivel para a busca de mais conhecimento.<br/>
+
+          </p>
+          </div>
+      </div>
         <div id="experience" className="experience">
         <h2 className="experienceTitle"> Experiência</h2>
         <VerticalTimeline lineColor="#3e497a">
@@ -73,15 +66,15 @@ function Home() {
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date="2018 - 2020"
+            date="2019 - 2021"
             iconStyle={{ background: "#e9d35b", color: "#fff" }}
             icon={<WorkIcon />}
           >
             <h3 className="vertical-timeline-element-title">
-              Back End Engineer - Google
+              Estagiário de Engenharia de software
             </h3>
             <h4 className="vertical-timeline-element-subtitle">
-              San Francisco, CA
+              Embraer S/A
             </h4>
             <p>Developed the backend infrastructure for 3 projects.</p>
           </VerticalTimelineElement>
